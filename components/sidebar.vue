@@ -8,7 +8,7 @@
       :right="right"
       :open.sync="open"
     >
-      <a class="delete is-large is-pulled-right is-relative" @click="open = false"></a>
+      <a class="delete is-large" @click="open = false"></a>
 
       <div>
         <h3 class="is-size-4">Goal:</h3>

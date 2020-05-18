@@ -3,6 +3,38 @@
     <div>
       <div>
         <div>
+          <h1 v-show="tracker != 0">Saftey Points: {{tracker}}</h1>
+
+          <!-- Shown after selecting a card -->
+          <!-- ************ <p>Index of SelectedCard: {{selectedCard}}</p> -->
+          <!-- Score *7 Cards in hand, after 7 cards score goes down* -->
+          <h1>Score: {{score}}</h1>
+
+          <!-- Add New Card -->
+          <p>Add New Card</p>
+
+          <!-- Generate Random Operation -->
+          <p>Random Operation: {{operation}}</p>
+
+          <!-- Top card in Pile -->
+          <h1>Pile: {{firstCard}}</h1>
+          <p>Add new top card to pile:</p>
+
+          <!-- Choices -->
+          <h1>Choice 1: {{num1}}</h1>
+          <h1>Choice 2: {{num2}}</h1>
+          <!-- Reset Choices -->
+          <!-- Calculate Result of two number choices &  Random Operator -->
+          <p>Total: {{total}}</p>
+
+          <!-- -->
+          <p>Hint: {{hint}}</p>
+          <!-- Shows if Calculated Value equals to Top card in Pile -->
+          <h1>Result: {{answer}}</h1>
+
+          <h1>Test: {{num1}} {{num1Index}} | {{num2}} {{num2Index}}</h1>
+        </div>
+        <div>
           <button @click="addCard">Draw Card</button>
           <button @click="generateOperator">Generate Operator</button>
           <button @click="newTopCard">Cheat</button>
