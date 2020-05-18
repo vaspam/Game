@@ -1,0 +1,50 @@
+<template>
+  <section>
+    <div @click="select" :class="{'card-selected':selected}" class="card">
+      <h1>{{name}}</h1>
+      <h1>{{indexor}}</h1>
+    </div>
+  </section>
+</template>
+
+<script>
+// import - from '~/components/-.vue'
+
+export default {
+  name: "card",
+  props: {
+    indexor: { type: Number },
+    name: { type: String, required: true }
+  },
+  data() {
+    return {
+      selected: false
+    };
+  },
+  components: {},
+  methods: {
+    select() {
+      this.selected = true;
+    }
+  }
+};
+</script>
+
+<style scoped>
+.card {
+  width: 50px;
+  height: 75px;
+  background-color: cadetblue;
+  margin: 5px;
+  float: left;
+}
+.card-selected {
+  width: 60px;
+  height: 85px;
+  background-color: crimson;
+  border: 1px solid black;
+  color: White;
+  margin: 5px;
+  float: left;
+}
+</style>
